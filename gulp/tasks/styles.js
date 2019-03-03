@@ -10,7 +10,7 @@ var gulp 			= require('gulp'),
 
 //pipes styles sheets and processes for postCSS/SASS
 gulp.task('styles', function() {
-	return gulp.src('./assets/styles/main.css')
+	return gulp.src('./resume-master/assets/styles/main.css')
 		.pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
 		.on('error', function(errorInfo){
 			console.log(errorInfo.toString());
