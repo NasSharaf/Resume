@@ -25,7 +25,7 @@ gulp.task('deleteDistFolder', function(){
 //to add any other files outside of the ones in the functions below
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
 	var pathsToCopy = [
-		'./resume-master/*/*',
+		'./resume-master/*/*/*',
 		'!./resume-master/index.html',
 		'!./resume-master/assets/images/**',
 		'!./resume-master/assets/styles/**',
