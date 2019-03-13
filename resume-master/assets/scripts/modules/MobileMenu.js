@@ -1,4 +1,4 @@
-import $ from 'jquery'; 
+import $ from 'jquery';
 
 class MobileMenu {
 	//selects elements to manipulate
@@ -10,9 +10,6 @@ class MobileMenu {
 	}
 	//points to what should be done when clicked
 	events() {
-		//Here the value "this" is pointing to the original constructor. It needs to be "bind"-ed
-		//to the constructor so that whe "this" is called in the toggleTheMenu() it will allow 
-		//access to menuContent
 		this.menuIcon.click(this.toggleTheMenu.bind(this));
 	}
 	//toggles certain actions on and off
@@ -23,4 +20,4 @@ class MobileMenu {
 	}
 }
 
-export default MobileMenu;
+module.exports = MobileMenu;

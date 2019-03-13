@@ -57,7 +57,9 @@ gulp.task('usemin', ['styles', 'scripts'], function(){
 	return gulp.src("./resume-master/index.html")
 		.pipe(usemin({
 			css: [function() {return rev()}, function() {return cssnano()}],
-			js: [function() {return rev()}, function(){return uglify()}]
+			js: [function() {return rev()}, function(){return uglify().on('error', function(e) {
+				console.log(e)
+			})}]
 		}))
 		.pipe(gulp.dest("./docs"));
 });

@@ -6,7 +6,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, "./resume-master/temp/scripts"),
-		filename: "[name].js"
+		filename: "App.js"
 	},
 	module: {
 		loaders: [
